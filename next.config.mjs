@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/menu-prototypu' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/menu-prototypu/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,7 +13,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
 }
 
 export default nextConfig
