@@ -34,9 +34,11 @@ const euclidSemibold = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "ВВ Меню Кафе",
+  description: "ВВ Меню Кафе",
+  icons: {
+    icon: "/logo.ico",
+  },
 }
 
 export default function RootLayout({
