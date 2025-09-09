@@ -271,56 +271,56 @@ export default function MenuPage() {
             <MenuSection title="БЛиНы">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с ветчиной и сыром"
                   title="БЛИН С ВЕТЧИНОЙ И СЫРОМ"
                   weight="195 г"
                   price="250"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с курицей и сыром"
                   title="БЛИН С КУРИЦЕЙ И СЫРОМ"
                   weight="194 г"
                   price="250"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин Цезарь"
                   title="БЛИН «ЦЕЗАРЬ»"
                   weight="239 г"
                   price="300"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с форелью"
                   title="БЛИН С ФОРЕЛЬЮ, СЛИВОЧНЫМ СЫРОМ И РУКОЛОЙ"
                   weight="199 г"
                   price="380"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с варёной сгущёнкой"
                   title="БЛИН С ВАРЁНОЙ СГУЩЁНКОЙ И ГРЕЦКИМ ОРЕХОМ"
                   weight="129 г"
                   price="100"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин со свежим бананом"
                   title="БЛИН СО СВЕЖИМ БАНАНОМ И ОРЕХОВОЙ ПАСТОЙ"
                   weight="179 г"
                   price="210"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с творожной начинкой"
                   title="БЛИН С ТВОРОЖНОЙ НАЧИНКОЙ И БАНАНОМ"
                   weight="249 г"
                   price="210"
                 />
                 <ItemCard
-                  imageSrc={withBasePath("/golden-pancakes.png")}
+                  imageSrc={"/golden-pancakes.png"}
                   imageAlt="Блин с печёной грушей"
                   title="БЛИН С ПЕЧЁНОЙ ГРУШЕЙ, МЁДОМ И ГРЕЦКИМ ОРЕХОМ"
                   weight="204 г"
