@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/utils"
 
 const sections = [
   { id: "drinks", label: "Напитки" },
@@ -155,7 +156,7 @@ export function Header() {
           <div className="flex justify-between items-center px-[24px] py-0">
             <div className="flex items-center gap-0">
               <Image
-                src="/vkusvill-logo.jpg"
+                src={withBasePath("/vkusvill-logo.jpg")}
                 alt="VkusVill Logo"
                 width={46.5}
                 height={46.5}

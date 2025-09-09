@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { ReactNode } from "react"
+import { withBasePath } from "@/lib/utils"
 
 interface MenuSectionProps {
   title: string
@@ -35,7 +36,7 @@ export function MenuSection({
           <div className="relative w-1/3 overflow-hidden">
             <div className="absolute top-0 left-0 w-[150%] md:w-full h-full">
               <Image
-                src={imageSrc || "/placeholder.svg"}
+                src={withBasePath(imageSrc || "/placeholder.svg")}
                 alt={imageAlt || title}
                 fill
                 className="object-cover"
