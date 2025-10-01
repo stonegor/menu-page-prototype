@@ -80,9 +80,29 @@ export default function MenuPage() {
             <div id="author-coffee">
               <MenuSection title={authorCoffee.title}>
                 <div className="space-y-4">
-                  {authorCoffee.items.map((item, index) => (
-                    <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                  ))}
+                  {authorCoffee.items.map((item, index) =>
+                    item.image_url ? (
+                      <ItemCard
+                        key={index}
+                        imageSrc={item.image_url}
+                        imageAlt={item.title}
+                        title={item.title}
+                        weight={item.weight}
+                        price={item.price}
+                        description={item.description}
+                        composition={item.composition}
+                      />
+                    ) : (
+                      <ItemRow
+                        key={index}
+                        title={item.title}
+                        weight={item.weight}
+                        price={item.price}
+                        description={item.description}
+                        composition={item.composition}
+                      />
+                    ),
+                  )}
                 </div>
               </MenuSection>
             </div>
@@ -90,9 +110,29 @@ export default function MenuPage() {
             <div id="author-lemonades">
               <MenuSection title={authorLemonades.title}>
                 <div className="space-y-4">
-                  {authorLemonades.items.map((item, index) => (
-                    <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                  ))}
+                  {authorLemonades.items.map((item, index) =>
+                    item.image_url ? (
+                      <ItemCard
+                        key={index}
+                        imageSrc={item.image_url}
+                        imageAlt={item.title}
+                        title={item.title}
+                        weight={item.weight}
+                        price={item.price}
+                        description={item.description}
+                        composition={item.composition}
+                      />
+                    ) : (
+                      <ItemRow
+                        key={index}
+                        title={item.title}
+                        weight={item.weight}
+                        price={item.price}
+                        description={item.description}
+                        composition={item.composition}
+                      />
+                    ),
+                  )}
                 </div>
               </MenuSection>
             </div>
@@ -123,16 +163,29 @@ export default function MenuPage() {
           <div id="pancakes">
             <MenuSection title={pancakes.title}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {pancakes.items.map((item, index) => (
-                  <ItemCard
-                    key={index}
-                    imageSrc={item.imageSrc}
-                    imageAlt={item.imageAlt}
-                    title={item.title}
-                    weight={item.weight}
-                    price={item.price}
-                  />
-                ))}
+                {pancakes.items.map((item, index) =>
+                  item.image_url ? (
+                    <ItemCard
+                      key={index}
+                      imageSrc={item.image_url}
+                      imageAlt={item.title}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ) : (
+                    <ItemRow
+                      key={index}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ),
+                )}
               </div>
             </MenuSection>
           </div>
@@ -140,9 +193,29 @@ export default function MenuPage() {
           <div id="croissants">
             <MenuSection title={croissants.title}>
               <div className="space-y-4">
-                {croissants.items.map((item, index) => (
-                  <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                ))}
+                {croissants.items.map((item, index) =>
+                  item.image_url ? (
+                    <ItemCard
+                      key={index}
+                      imageSrc={item.image_url}
+                      imageAlt={item.title}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ) : (
+                    <ItemRow
+                      key={index}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ),
+                )}
               </div>
             </MenuSection>
           </div>
@@ -150,9 +223,29 @@ export default function MenuPage() {
           <div id="sandwiches">
             <MenuSection title={sandwiches.title}>
               <div className="space-y-4">
-                {sandwiches.items.map((item, index) => (
-                  <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                ))}
+                {sandwiches.items.map((item, index) =>
+                  item.image_url ? (
+                    <ItemCard
+                      key={index}
+                      imageSrc={item.image_url}
+                      imageAlt={item.title}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ) : (
+                    <ItemRow
+                      key={index}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ),
+                )}
               </div>
             </MenuSection>
           </div>
@@ -160,9 +253,29 @@ export default function MenuPage() {
           <div id="breakfasts">
             <MenuSection title={breakfasts.title}>
               <div className="space-y-4">
-                {breakfasts.items.map((item, index) => (
-                  <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                ))}
+                {breakfasts.items.map((item, index) =>
+                  item.image_url ? (
+                    <ItemCard
+                      key={index}
+                      imageSrc={item.image_url}
+                      imageAlt={item.title}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ) : (
+                    <ItemRow
+                      key={index}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ),
+                )}
               </div>
             </MenuSection>
           </div>
@@ -170,26 +283,86 @@ export default function MenuPage() {
           <div id="pizza">
             <MenuSection title={pizza.title}>
               <div className="space-y-4">
-                {pizza.items.map((item, index) => (
-                  <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-                ))}
+                {pizza.items.map((item, index) =>
+                  item.image_url ? (
+                    <ItemCard
+                      key={index}
+                      imageSrc={item.image_url}
+                      imageAlt={item.title}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ) : (
+                    <ItemRow
+                      key={index}
+                      title={item.title}
+                      weight={item.weight}
+                      price={item.price}
+                      description={item.description}
+                      composition={item.composition}
+                    />
+                  ),
+                )}
               </div>
             </MenuSection>
           </div>
 
           <div id="dumplings">
             <MenuSection title={dumplings.title} titleMultiline={dumplings.titleMultiline}>
-              {dumplings.items.map((item, index) => (
-                <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-              ))}
+              {dumplings.items.map((item, index) =>
+                item.image_url ? (
+                  <ItemCard
+                    key={index}
+                    imageSrc={item.image_url}
+                    imageAlt={item.title}
+                    title={item.title}
+                    weight={item.weight}
+                    price={item.price}
+                    description={item.description}
+                    composition={item.composition}
+                  />
+                ) : (
+                  <ItemRow
+                    key={index}
+                    title={item.title}
+                    weight={item.weight}
+                    price={item.price}
+                    description={item.description}
+                    composition={item.composition}
+                  />
+                ),
+              )}
             </MenuSection>
           </div>
 
           <div id="main-dishes">
             <MenuSection title={mainDishes.title}>
-              {mainDishes.items.map((item, index) => (
-                <ItemRow key={index} title={item.title} weight={item.weight} price={item.price} />
-              ))}
+              {mainDishes.items.map((item, index) =>
+                item.image_url ? (
+                  <ItemCard
+                    key={index}
+                    imageSrc={item.image_url}
+                    imageAlt={item.title}
+                    title={item.title}
+                    weight={item.weight}
+                    price={item.price}
+                    description={item.description}
+                    composition={item.composition}
+                  />
+                ) : (
+                  <ItemRow
+                    key={index}
+                    title={item.title}
+                    weight={item.weight}
+                    price={item.price}
+                    description={item.description}
+                    composition={item.composition}
+                  />
+                ),
+              )}
             </MenuSection>
           </div>
         </div>
