@@ -78,61 +78,87 @@ export default function MenuPage() {
 
             <div id="author-coffee">
               <MenuSection title={authorCoffee.title}>
-                <div className="space-y-4">
-                  {authorCoffee.items.map((item, index) =>
-                    item.image_url ? (
-                      <ItemCard
-                        key={index}
-                        imageSrc={item.image_url}
-                        imageAlt={item.title}
-                        title={item.title}
-                        weight={item.weight}
-                        price={item.price}
-                        description={item.description}
-                        composition={item.composition}
-                      />
-                    ) : (
-                      <ItemRow
-                        key={index}
-                        title={item.title}
-                        weight={item.weight}
-                        price={item.price}
-                        description={item.description}
-                        composition={item.composition}
-                      />
-                    ),
-                  )}
-                </div>
+                {(() => {
+                  const itemsWithImages = authorCoffee.items.filter(item => item.image_url)
+                  const itemsWithoutImages = authorCoffee.items.filter(item => !item.image_url)
+                  return (
+                    <>
+                      {itemsWithImages.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                          {itemsWithImages.map((item, index) => (
+                            <ItemCard
+                              key={index}
+                              imageSrc={item.image_url!}
+                              imageAlt={item.title}
+                              title={item.title}
+                              weight={item.weight}
+                              price={item.price}
+                              description={item.description}
+                              composition={item.composition}
+                            />
+                          ))}
+                        </div>
+                      )}
+                      {itemsWithoutImages.length > 0 && (
+                        <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                          {itemsWithoutImages.map((item, index) => (
+                            <ItemRow
+                              key={index}
+                              title={item.title}
+                              weight={item.weight}
+                              price={item.price}
+                              description={item.description}
+                              composition={item.composition}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )
+                })()}
               </MenuSection>
             </div>
 
             <div id="author-lemonades">
               <MenuSection title={authorLemonades.title}>
-                <div className="space-y-4">
-                  {authorLemonades.items.map((item, index) =>
-                    item.image_url ? (
-                      <ItemCard
-                        key={index}
-                        imageSrc={item.image_url}
-                        imageAlt={item.title}
-                        title={item.title}
-                        weight={item.weight}
-                        price={item.price}
-                        description={item.description}
-                        composition={item.composition}
-                      />
-                    ) : (
-                      <ItemRow
-                        key={index}
-                        title={item.title}
-                        weight={item.weight}
-                        price={item.price}
-                        description={item.description}
-                        composition={item.composition}
-                      />
-                    ),
-                  )}
-                </div>
+                {(() => {
+                  const itemsWithImages = authorLemonades.items.filter(item => item.image_url)
+                  const itemsWithoutImages = authorLemonades.items.filter(item => !item.image_url)
+                  return (
+                    <>
+                      {itemsWithImages.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                          {itemsWithImages.map((item, index) => (
+                            <ItemCard
+                              key={index}
+                              imageSrc={item.image_url!}
+                              imageAlt={item.title}
+                              title={item.title}
+                              weight={item.weight}
+                              price={item.price}
+                              description={item.description}
+                              composition={item.composition}
+                            />
+                          ))}
+                        </div>
+                      )}
+                      {itemsWithoutImages.length > 0 && (
+                        <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                          {itemsWithoutImages.map((item, index) => (
+                            <ItemRow
+                              key={index}
+                              title={item.title}
+                              weight={item.weight}
+                              price={item.price}
+                              description={item.description}
+                              composition={item.composition}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )
+                })()}
               </MenuSection>
             </div>
 
@@ -161,122 +187,174 @@ export default function MenuPage() {
 
           <div id="pancakes">
             <MenuSection title={pancakes.title}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {pancakes.items.map((item, index) =>
-                  item.image_url ? (
-                    <ItemCard
-                      key={index}
-                      imageSrc={item.image_url}
-                      imageAlt={item.title}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ) : (
-                    <ItemRow
-                      key={index}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ),
-                )}
-              </div>
+              {(() => {
+                const itemsWithImages = pancakes.items.filter(item => item.image_url)
+                const itemsWithoutImages = pancakes.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
             </MenuSection>
           </div>
 
 
           <div id="sandwiches">
             <MenuSection title={sandwiches.title}>
-              <div className="space-y-4">
-                {sandwiches.items.map((item, index) =>
-                  item.image_url ? (
-                    <ItemCard
-                      key={index}
-                      imageSrc={item.image_url}
-                      imageAlt={item.title}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ) : (
-                    <ItemRow
-                      key={index}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ),
-                )}
-              </div>
+              {(() => {
+                const itemsWithImages = sandwiches.items.filter(item => item.image_url)
+                const itemsWithoutImages = sandwiches.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
             </MenuSection>
           </div>
 
           <div id="breakfasts">
             <MenuSection title={breakfasts.title}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {breakfasts.items.map((item, index) =>
-                  item.image_url ? (
-                    <ItemCard
-                      key={index}
-                      imageSrc={item.image_url}
-                      imageAlt={item.title}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ) : (
-                    <ItemRow
-                      key={index}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ),
-                )}
-              </div>
+              {(() => {
+                const itemsWithImages = breakfasts.items.filter(item => item.image_url)
+                const itemsWithoutImages = breakfasts.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
             </MenuSection>
           </div>
 
           <div id="lunches">
             <MenuSection title={lunches.title}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {lunches.items.map((item, index) =>
-                  item.image_url ? (
-                    <ItemCard
-                      key={index}
-                      imageSrc={item.image_url}
-                      imageAlt={item.title}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ) : (
-                    <ItemRow
-                      key={index}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ),
-                )}
-              </div>
+              {(() => {
+                const itemsWithImages = lunches.items.filter(item => item.image_url)
+                const itemsWithoutImages = lunches.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
             </MenuSection>
           </div>
 
