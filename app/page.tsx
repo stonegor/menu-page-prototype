@@ -189,35 +189,6 @@ export default function MenuPage() {
             </MenuSection>
           </div>
 
-          <div id="croissants">
-            <MenuSection title={croissants.title}>
-              <div className="space-y-4">
-                {croissants.items.map((item, index) =>
-                  item.image_url ? (
-                    <ItemCard
-                      key={index}
-                      imageSrc={item.image_url}
-                      imageAlt={item.title}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ) : (
-                    <ItemRow
-                      key={index}
-                      title={item.title}
-                      weight={item.weight}
-                      price={item.price}
-                      description={item.description}
-                      composition={item.composition}
-                    />
-                  ),
-                )}
-              </div>
-            </MenuSection>
-          </div>
 
           <div id="sandwiches">
             <MenuSection title={sandwiches.title}>
@@ -309,33 +280,6 @@ export default function MenuPage() {
             </MenuSection>
           </div>
 
-          <div id="main-dishes">
-            <MenuSection title={mainDishes.title}>
-              {mainDishes.items.map((item, index) =>
-                item.image_url ? (
-                  <ItemCard
-                    key={index}
-                    imageSrc={item.image_url}
-                    imageAlt={item.title}
-                    title={item.title}
-                    weight={item.weight}
-                    price={item.price}
-                    description={item.description}
-                    composition={item.composition}
-                  />
-                ) : (
-                  <ItemRow
-                    key={index}
-                    title={item.title}
-                    weight={item.weight}
-                    price={item.price}
-                    description={item.description}
-                    composition={item.composition}
-                  />
-                ),
-              )}
-            </MenuSection>
-          </div>
         </div>
       </div>
     </div>
