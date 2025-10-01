@@ -39,7 +39,7 @@ export function ItemPopup({
 
         <div className="space-y-3 md:space-y-4">
           <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
-            <Image src={imageSrc} alt={imageAlt} layout="fill" objectFit="cover" />
+            <Image src={`https://photo.vkusvill.ru/media/documents_preview_big/${imageSrc}`} alt={imageAlt} layout="fill" objectFit="cover" />
           </div>
 
           {/* Details Section */}

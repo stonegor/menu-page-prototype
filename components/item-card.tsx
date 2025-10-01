@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import { withBasePath } from "@/lib/utils"
+
 import { ItemPopup } from "./item-popup"
 
 interface ItemCardProps {
@@ -26,7 +26,7 @@ export function ItemCard({ imageSrc, imageAlt, title, weight, price, description
       >
         <div className="mb-3">
           <Image
-            src={withBasePath(imageSrc || "/placeholder.svg")}
+            src={`https://photo.vkusvill.ru/media/documents_preview_small/${imageSrc}` || "/placeholder.svg"}
             alt={imageAlt}
             width={180}
             height={120}
