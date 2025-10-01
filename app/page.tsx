@@ -19,8 +19,7 @@ import {
   croissants,
   sandwiches,
   breakfasts,
-  pizza,
-  dumplings,
+  lunches,
   mainDishes,
 } from "./menu-data"
 
@@ -280,10 +279,10 @@ export default function MenuPage() {
             </MenuSection>
           </div>
 
-          <div id="pizza">
-            <MenuSection title={pizza.title}>
-              <div className="space-y-4">
-                {pizza.items.map((item, index) =>
+          <div id="lunches">
+            <MenuSection title={lunches.title}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {lunches.items.map((item, index) =>
                   item.image_url ? (
                     <ItemCard
                       key={index}
@@ -307,34 +306,6 @@ export default function MenuPage() {
                   ),
                 )}
               </div>
-            </MenuSection>
-          </div>
-
-          <div id="dumplings">
-            <MenuSection title={dumplings.title} titleMultiline={dumplings.titleMultiline}>
-              {dumplings.items.map((item, index) =>
-                item.image_url ? (
-                  <ItemCard
-                    key={index}
-                    imageSrc={item.image_url}
-                    imageAlt={item.title}
-                    title={item.title}
-                    weight={item.weight}
-                    price={item.price}
-                    description={item.description}
-                    composition={item.composition}
-                  />
-                ) : (
-                  <ItemRow
-                    key={index}
-                    title={item.title}
-                    weight={item.weight}
-                    price={item.price}
-                    description={item.description}
-                    composition={item.composition}
-                  />
-                ),
-              )}
             </MenuSection>
           </div>
 
