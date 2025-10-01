@@ -16,11 +16,12 @@ import {
   milkshakes,
   additionalOptions2,
   pancakes,
-  croissants,
   sandwiches,
   breakfasts,
   lunches,
-  mainDishes,
+  desserts,
+  dinner,
+  salads,
 } from "./menu-data"
 
 export default function MenuPage() {
@@ -357,6 +358,136 @@ export default function MenuPage() {
               })()}
             </MenuSection>
           </div>
+
+          <div id="salads">
+            <MenuSection title={salads.title}>
+              {(() => {
+                const itemsWithImages = salads.items.filter(item => item.image_url)
+                const itemsWithoutImages = salads.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
+            </MenuSection>
+          </div>
+
+          <div id="dinner">
+            <MenuSection title={dinner.title}>
+              {(() => {
+                const itemsWithImages = dinner.items.filter(item => item.image_url)
+                const itemsWithoutImages = dinner.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
+            </MenuSection>
+          </div>
+
+          <div id="desserts">
+            <MenuSection title={desserts.title}>
+              {(() => {
+                const itemsWithImages = desserts.items.filter(item => item.image_url)
+                const itemsWithoutImages = desserts.items.filter(item => !item.image_url)
+                return (
+                  <>
+                    {itemsWithImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {itemsWithImages.map((item, index) => (
+                          <ItemCard
+                            key={index}
+                            imageSrc={item.image_url!}
+                            imageAlt={item.title}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {itemsWithoutImages.length > 0 && (
+                      <div className={`space-y-4 ${itemsWithImages.length > 0 ? "mt-8" : ""}`}>
+                        {itemsWithoutImages.map((item, index) => (
+                          <ItemRow
+                            key={index}
+                            title={item.title}
+                            weight={item.weight}
+                            price={item.price}
+                            description={item.description}
+                            composition={item.composition}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )
+              })()}
+            </MenuSection>
+          </div>
+
 
         </div>
       </div>
